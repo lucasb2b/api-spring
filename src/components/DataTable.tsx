@@ -32,7 +32,7 @@ export default function DataTable() {
   }
 
   return (
-    <table className="table">
+    <table className="table table-dark table-hover">
       <thead>
         <tr>
           <th scope="col">#</th>
