@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Pessoa } from "@/types/Pessoa";
+import Link from "next/link";
 
 export default function DataTable() {
   const [pessoas, setPessoas] = useState<Pessoa[]>([]);
@@ -52,7 +53,7 @@ export default function DataTable() {
               <td>{pessoa.endereco.substring(0, 10)}</td>
               <td>{pessoa.telefone}</td>
               <td>{pessoa.ativo ? "Ativo" : "Inativo"}</td>
-              <td>Editar | Apagar</td>
+              <td><Link href={`/pessoas/${pessoa.id}/edit`} className="btn btn-warning">Editar</Link> | Apagar</td>
             </tr>
           ))
         }
